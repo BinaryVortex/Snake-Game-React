@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Open Sans', sans-serif
+
+body
+  background: #e3f2fd
+  min-height: 100vh
+
+.snake-centerer
+  min-height: 100vh
+  width: 100vw
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0
+
+.snake-layout
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 48px
+
+.wrapper
+  width: 65vmin
+  height: 70vmin
+  display: flex
+  overflow: hidden
+  flex-direction: column
+  justify-content: center
+  background: #293447
+  border-radius: 8px
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2)
+
+.game-details
+  color: #b8c6dc
+  font-weight: 500
+  font-size: 1.2rem
+  padding: 20px 27px
+  display: flex
+  justify-content: space-between
+
+.play-board
+  height: 100%
+  width: 100%
+  display: grid
+  background: #212837
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr)
+  .food
+    background: #ff003d
+  .head
+    background: #60cbff
+
+.controls
+  display: none
+  justify-content: space-between
+  i
+    padding: 25px 0
+    text-align: center
+    font-size: 1.3rem
+    color: #b8c6dc
+    width: calc(100% / 4)
+    cursor: pointer
+    border-right: 1px solid #171b26
+
+.how-to-play-card
+  min-width: 270px
+  max-width: 320px
+  background: #f8fafc
+  border-radius: 12px
+  box-shadow: 0 8px 24px rgba(52, 87, 220, 0.10)
+  color: #293447
+  text-align: left
+  padding: 28px 32px
+  margin-top: 0
+  h2
+    font-size: 1.35rem
+    margin-bottom: 24px
+    font-weight: 700
+    color: #212837
+    display: flex
+    align-items: center
+    gap: 8px
+    justify-content: left
+
+  .htp-list
+    display: flex
+    flex-direction: column
+    gap: 18px
+
+  .htp-row
+    display: flex
+    align-items: flex-start
+    gap: 14px
+    font-size: 1.13rem
+    line-height: 1.4
+    span
+      display: flex
+      flex-direction: column
+      justify-content: center
+    .htp-sub
+      font-size: 0.98rem
+      color: #6b7a8f
+      font-weight: 400
+      margin-top: 2px
+
+    .htp-icon
+      font-size: 1.4rem
+      margin-top: 2px
+      min-width: 28px
+      text-align: center
+      &.blue
+        color: #60cbff
+      &.red
+        color: #ff003d
+      &.cyan
+        color: #48d9ec
+      &.gold
+        color: #ffd700
+
+    .food-icon
+      display: inline-block
+      width: 18px
+      height: 18px
+      border-radius: 4px
+      background: #ff003d
+      vertical-align: middle
+      margin-bottom: -2px
+      margin-left: 2px
+
+@media screen and (max-width: 1100px)
+  .snake-layout
+    gap: 24px
+
+@media screen and (max-width: 900px)
+  .snake-centerer
+    padding-top: 18px
+  .snake-layout
+    flex-direction: column
+    align-items: center
+    gap: 18px
+  .how-to-play-card
+    max-width: 95vw
+    margin: 0 auto 32px auto
+
+@media screen and (max-width: 800px)
+  .wrapper
+    width: 90vmin
+    height: 115vmin
+
+  .game-details
+    font-size: 1rem
+    padding: 15px 27px
+
+  .controls
+    display: flex
+    i
+      padding: 15px 0
+      font-size: 1rem
